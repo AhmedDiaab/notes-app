@@ -1,5 +1,3 @@
-import Backdrop from "./components/Backdrop";
-import Modal from "./components/Modal";
 import Todo from "./components/Todo";
 // React elements must start with capital letter
 // this is how react deferentiates between native html elements 
@@ -11,8 +9,6 @@ function App() {
       <Todo text="Learn React"/> 
       <Todo text="Learn Next"/> 
       <Todo text="Create Application"/> 
-      <Modal />
-      <Backdrop />
     </div>
   );
 }
