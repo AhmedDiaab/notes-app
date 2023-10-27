@@ -12,6 +12,14 @@ function Todo(props) {
     setIsModalOpen(!isModalOpen);
   }
 
+  function cancelHandler() {
+    setIsModalOpen(!isModalOpen);
+  }
+
+  function confirmHandler() {
+    setIsModalOpen(!isModalOpen);
+  }
+
   return (
     <div className="card">
       <h2>{props.text}</h2>
@@ -20,8 +28,8 @@ function Todo(props) {
           Click me
         </button>
       </div>
-      {isModalOpen && <Modal />}
-      {isModalOpen && <Backdrop />}
+      {isModalOpen && <Modal onConfirm={confirmHandler} onCancel={cancelHandler}/>}
+      {isModalOpen && <Backdrop onCancel={cancelHandler}/>}
     </div>
   );
 }
